@@ -1,0 +1,39 @@
+﻿Compiling P1652 programs on Ubuntu OS
+
+
+1.  These directions are based on Ubuntu 20.04 using the CLI
+   1. Maybe able to us Ubuntu App in Windows Store
+2. mkdir crypto
+3. cd crypto
+4. sudo apt update
+5. sudo apt upgrade
+6. Create dependencies
+   1. sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+   2. sudo apt-get update
+   3. sudo apt-get install aptitude -y
+   4. sudo aptitude install -y build-essential g++-8 gcc-8 python3-pip libssl-dev
+   5. sudo apt-get install libboost-all-dev
+   6. sudo apt-get install libssl-dev
+   7. sudo pip install cmake
+      1. May need to install pip first (sudo apt install python3-pip)
+   8. export CC=gcc-8
+   9. export CXX=g++-8
+
+
+7. Git files
+   1. git clone https://github.com/frandlyn26/P1652.git 
+8. Now we Compile
+9. cd P1652 
+10. mkdir build
+   1. cd build
+   2. If compiling for Ubuntu only
+      1. cmake .. && make 
+11. Wait patiently
+Running Programs
+1. Navigate to the crypto/build/src directory.
+2. To start the node (add --help after commands below to see options available)
+   1. ./P1652d
+3. To start the wallet 
+   1. ./zedwallet
+4. To start the miner
+   1. ./miner
