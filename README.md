@@ -22,11 +22,14 @@ To use P1652, you'll need a way to connect to the network, and a wallet to hold 
 
 To compile from sourcecode yourself, build instructions will be comming.
 
-Ubuntu Build Instructions - 
+Build Instructions
+  - [Ubuntu](https://github.com/frandlyn26/P1652-1.0/blob/master/Pine%20Tree%20Shilling%20create%20node.txt)
 
 ### Getting Started Fast
 
-Everyone starts somewhere. If you're new or returning, you'll probably want to get in sync with the network so you can use your funds. Syncing from your own node is faster than syncing from a remote node. Here are some handy links to get you there as soon as possible.
+Docker containers can be a quick way to get your node/wallet/miner up and running.
+[P1652 Docker Repository](https://hub.docker.com/repository/docker/frandlyn/p1652)
+
 
 
 ### A note for contributing developers
