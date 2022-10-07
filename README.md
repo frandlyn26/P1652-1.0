@@ -24,6 +24,7 @@ To compile from sourcecode yourself, build instructions will be comming.
 
 Build Instructions
   - [Ubuntu](https://github.com/frandlyn26/P1652-1.0/blob/master/Pine%20Tree%20Shilling%20create%20node.txt)
+  - [Raspberry PI](https://github.com/frandlyn26/P1652-1.0/blob/master/PTS%20Compile%20Raspberry%20PI.txt)
 
 ### Getting Started Fast
 
