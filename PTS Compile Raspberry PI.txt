@@ -1,0 +1,29 @@
+﻿Pine Tree Shilling 1652
+Raspberry Pi node compile
+Test run 
+user adjustments maybe required. This is not for the faint of heart.
+
+
+1. Best to create a user that has SUDO capability instead of using root
+   1. From a terminal (<CNTRL>+<SHIFT>+t) if not already in one.
+   2. Useradd “ place a username you want to use here and erase quotes”
+   3. Usermod -aG sudo “username from previous step”
+      1. Choose password and follow prompts, password only thing required
+2. Switch to your user
+   1. su User
+   2. If you are in root directory, then  “cd ..” and run dir command until you see other choices such as home
+   3. cd home (or whater directory you choose) I recommend home or one with your username if present
+3. From your chosen directory
+   1. mkdir P1652
+   2. cd P1652
+4. Get dependencies
+   1. sudo apt-get update && sudo apt-get upgrade
+   2. sudo apt-get install git build-essential cmake make libuv1-dev libmicrohttpd-dev gcc g++ automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev
+   3. sudo apt-get install libboost-all-dev
+   4. Git clone https://github.com/frandlyn26/P1652-1.0.git
+5. Create Build folder
+   1. Mkdir build
+   2. Cd build
+6. Compile - 
+   1. cmake .. -DCMAKE_C_FLAGS="-mcpu=cortex-a72 -mtune=cortex-a72" -DCMAKE_CXX_FLAGS="-mcpu=cortex-a72 -mtune=cortex-a72"
+   2. Make
