@@ -9,7 +9,7 @@
 We are a group of blockchain Enthusiast and would love to have your contributions.
 
 -   If you'd like to report a bug, [fill out a bug report](https://github.com/turtlecoin/turtlecoin/issues/new?template=bug_report.md)
--   If you'd like to submit code for a bug you fixed, [submit a pull-request](https://github.com/turtlecoin/turtlecoin/compare)
+-   If you'd like to submit code for a bug you fixed, [submit a pull-request](https://github.com/frandlyn26/P1652-1.0/pulls))
 -   If you're a tester submitting tests you've done on a Release Candidate, [click here](https://github.com/turtlecoin/turtlecoin/issues/new?template=release-candidate.md)
 -   If you're a beginner developer, and want a list of easy things you can accomplish to help, [click here for a list of TODOs](https://github.com/turtlecoin/turtlecoin/labels/GOOD%20FIRST%20ISSUE)
 -   **Everyone else just click the ★ star at the top of this repository 😊 It really helps us out!**
