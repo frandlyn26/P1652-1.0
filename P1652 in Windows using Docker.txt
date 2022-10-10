@@ -1,0 +1,74 @@
+﻿P1652 on Windows
+Using Docker Desktop for Windows
+
+
+1. Install Docker Desktop for Windows
+   1. https://docs.docker.com/desktop/install/windows-install/ - Ful Instructions
+   2. Abbreviated Instructions
+      1. 1 Download file https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe
+      2. Double Click file once downloaded to run installer
+      3. Close and log out of Windows win prompted.
+      4. Log back in to Windows
+      5. Accept all of the “selling your soul” legalese
+2. Now you need to get the docker image
+   1. Two ways to get docker image
+      1. Open Command prompt and use following command
+         1. docker pull frandlyn/p1652:node
+      2. Sign up for docker hub and access the frandly/p1652 repository
+3. Setting up your image to make them a container.
+   1.  Create a Volume name - required to allow data persistence when containers are stopped)
+      1. Click On Volumes
+      2. Click Create
+      3. Name your volume - I will use “p1652”
+   2. Now run your “node” container attached to volume “p1652”
+      1. Click on Images
+      2. Click Run at far right side of frandlyn/p1652 node
+      3. Click Optional Settings
+         1. Name your container - I am choosing P1652-Node
+         2. Assign Host Ports - should not need this
+         3. Create path for your volume
+            1. Host path - p1652 (or whatever you choose earlier)
+            2. Container Path -  /p1652-1.0/build/src
+         4. Click Run
+   3. The node will start automatically once you run it. 
+   4. Verify the node connected to the blockchain.
+      1. Click You node name to go to the Logs image.
+      2. Look for a line saying your node is synched or is synching.
+         1. Your P1652 node is synching with the network …
+         2. Successfully synchronized with the P1652 Network
+   5. Once you get the message similar to # 2 you are now running a node and helping secure the blockchain. Thank you
+4. Creating a Wallet - You need this to receive and send shillings.
+   1. Click on Cli at top to access a terminal inside of container.
+      1. At the # prompt type ./zedwallet
+      2. You will now have a menu to go through and select different option by choosing a number and pressing enter, You can also type in commands directly.
+      3. Choose 2 to create your first wallet.
+      4. Name your wallet, and choose a password.
+      5. After wallet is created, you will want to copy and save the following ( with this info you can access your shillings from another wallet or rebuild your wallet here if it gets erased by accident.
+         1. Payment Address - starts with P1652
+            1. Used to receive shilings from mining or other people
+         2. Private Spend key
+            1. Needed when sending  shillings
+         3. Private View Key
+            1. Needed to view your transactions (this is a privacy based blockchain)
+         4. Mnemonic seed: This phrase is required to restore a fully functioning wallet.
+            1. Do not share this phrase, and do not lose it.
+5. Mining P1652 - A good way to get shillings and to help secure the network.
+   1. Exit the Wallet if it is open, or open a new terminal.
+   2. .At the prompt # type ./miner to start miner.
+      1. You can use the ./miner --threads 1 if you want to only use one thread of your cpu. 
+   3. The miner will ask for payment address
+      1. What address do you ant to mine to? 
+      2. You will use the long address that starts with P1652 you received when you created the wallet.
+      3. You will get a message that says 
+         1. Started mining for difficulty of ######. Good luck!
+   4. Stop the miner
+      1. Ctrl + c will stop the miner.
+   5. Miner options and help using following command
+      1. ./miner --help
+
+
+
+
+
+
+The node and miner should run
